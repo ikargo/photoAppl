@@ -146,6 +146,7 @@
 				TargetAttributes = {
 					04BCD3AF1E7FDB730091293F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 24FMPU6YLJ;
 						ProvisioningStyle = Automatic;
 					};
 					04BCD3C31E7FDB730091293F = {
@@ -339,11 +340,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 24FMPU6YLJ;
 				INFOPLIST_FILE = photoAppl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = apla.photoAppl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -351,11 +355,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 24FMPU6YLJ;
 				INFOPLIST_FILE = photoAppl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = apla.photoAppl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -406,6 +413,7 @@
 				04BCD3CF1E7FDB730091293F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04BCD3D01E7FDB730091293F /* Build configuration list for PBXNativeTarget "photoApplTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +422,7 @@
 				04BCD3D21E7FDB730091293F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
