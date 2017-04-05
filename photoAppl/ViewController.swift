@@ -15,12 +15,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var picker: UIImagePickerController?
     @IBOutlet weak var imageIn: UIImageView!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Loading camera")
         
-        
-    }
+          }
 
     
     override func didReceiveMemoryWarning() {
@@ -54,24 +54,28 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    @IBAction func showImagePickerForPhotoLibrary(_ sender: Any) {
+        self.showImagePickerForSourceType(sourceType: .photoLibrary, button: sender  as! UIBarButtonItem)
+    }
     
     func showImagePickerForSourceType(sourceType:UIImagePickerControllerSourceType, button:UIBarButtonItem){
         
-        if (imageIn.isAnimating) {
-            imageIn.stopAnimating()
-        }
-        let picker = UIImagePickerController()
-        picker.modalPresentationStyle = .currentContext
-        picker.sourceType = sourceType
-        picker.delegate = self
-        picker.modalPresentationStyle = .fullScreen
+      //  if (imageIn.isAnimating) {
+      //      imageIn.stopAnimating()
+      //  }
         
-        let presenter = picker.popoverPresentationController
+        let newPicker = UIImagePickerController()
+        newPicker.modalPresentationStyle = .currentContext
+        newPicker.sourceType = sourceType
+        newPicker.delegate = self
+        //newPicker.modalPresentationStyle = .currentContext
+        
+        let presenter = newPicker.popoverPresentationController
         presenter?.barButtonItem = button
         presenter?.permittedArrowDirections = .any
         
-        self.picker = picker// not unserstood
-        self.present(self.picker!, animated: true, completion: nil)// not unserstood
+        self.picker = newPicker
+        self.present(self.picker!, animated: true, completion: nil)
     }
     
     
@@ -81,8 +85,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let image = info[UIImagePickerControllerOriginalImage]
         print("Captured image \(image)")
         self.dismiss(animated: true, completion: nil)
+        
+      
+     self.performSegue(withIdentifier: "showPhotoWithInformation", sender: self)
+       
     }
+    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let destinationForThePhoto = segue.destination as! PhotoWithInformation
+        destinationForThePhoto.imageOnTheShow = imageIn as! UIImageView
+        
+    }
+
+    */
     
+    
+    
+    
+    
+    //UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+    //[self dismissViewControllerAnimated:YES completion:nil];
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         print(" Cancel taking photo ")
@@ -90,7 +112,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
+    // let storyboard = UIStoryboard(name: "PhotoWithInformation", bundle: nil)
+    // let vc = storyboard.instantiateViewController(withIdentifier: "showPhotoWithInformation")
+    // navigationcontroller?.pushViewController(vc, animated: true)
     
+    
+    // let controller = PhotoWithInformation()
+    //controller.delegate = self
+    //controller.imageOnTheShow = image
+    
+    // navigationController?.present(controller, animated: true, completion: nil)
+    
+    //controller.imageOnTheShow = image as! UIImageView
+    
+    
+    
+    //destinationForThePhoto.imageOnTheShow = image as! UIImageView
+    
+    // let newPhotowithData = PhotoWithInformation()
+    //   newPhotowithData.imageOnTheShow = image as! UIImageView
     
     
     
@@ -103,5 +143,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
 }
+
+
 
    

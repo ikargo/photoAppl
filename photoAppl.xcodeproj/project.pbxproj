@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04710DED1E9392BF004DD855 /* PhotoWithInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04710DEC1E9392BF004DD855 /* PhotoWithInformation.swift */; };
 		04BCD3B41E7FDB730091293F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCD3B31E7FDB730091293F /* AppDelegate.swift */; };
 		04BCD3B61E7FDB730091293F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCD3B51E7FDB730091293F /* ViewController.swift */; };
 		04BCD3B91E7FDB730091293F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BCD3B71E7FDB730091293F /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04710DEC1E9392BF004DD855 /* PhotoWithInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoWithInformation.swift; sourceTree = "<group>"; };
 		04BCD3B01E7FDB730091293F /* photoAppl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photoAppl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BCD3B31E7FDB730091293F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BCD3B51E7FDB730091293F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				04BCD3B31E7FDB730091293F /* AppDelegate.swift */,
 				04BCD3B51E7FDB730091293F /* ViewController.swift */,
 				04BCD3B71E7FDB730091293F /* Main.storyboard */,
+				04710DEC1E9392BF004DD855 /* PhotoWithInformation.swift */,
 				04BCD3BA1E7FDB730091293F /* Assets.xcassets */,
 				04BCD3BC1E7FDB730091293F /* LaunchScreen.storyboard */,
 				04BCD3BF1E7FDB730091293F /* Info.plist */,
@@ -202,6 +205,7 @@
 			files = (
 				04BCD3B61E7FDB730091293F /* ViewController.swift in Sources */,
 				04BCD3B41E7FDB730091293F /* AppDelegate.swift in Sources */,
+				04710DED1E9392BF004DD855 /* PhotoWithInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
